@@ -7,23 +7,23 @@
     To get started, follow these steps:
     1. Use the install script for easy installation:
 
-        #### Mac & Linux
+        === "MacOS/ Linux"
 
-        ```sh
-        curl -fsSL https://raw.githubusercontent.com/KruxAI/ragbuilder-readme/main/install.sh | bash
-        ```
+            ``` sh
+            curl -fsSL https://install.ragbuilder.io/mac | bash
+            ```
 
-        #### Windows
+        === "Windows"
 
-        ```sh
-        curl -fsSL https://raw.githubusercontent.com/KruxAI/ragbuilder-readme/main/install.bat
-        ```
-
-        Run `install.bat` from the command prompt
-        
-        ```sh
-        install.bat
-        ```
+            ``` sh
+            curl -fsSL https://install.ragbuilder.io/win
+            ```
+            
+            Run install.bat from command prompt
+            
+            ``` sh
+            install.bat
+            ```
 
     2. Setup your OpenAI API key.
 

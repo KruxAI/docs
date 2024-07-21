@@ -4,11 +4,25 @@ RagBuilder is a toolkit that helps you create optimal Production-ready Retrieval
 
 ## Installation
 
-### Option 1: Install using pip:
+### Option 1: Install using install script:
 
-``` sh
-pip install ragbuilder
-```
+=== "MacOS/ Linux"
+
+    ``` sh
+    curl -fsSL https://install.ragbuilder.io/mac | bash
+    ```
+
+=== "Windows"
+
+    ``` sh
+    curl -fsSL https://install.ragbuilder.io/win
+    ```
+    
+    Run install.bat from command prompt
+    
+    ``` sh
+    install.bat
+    ```
 
 #### Set your OpenAI API key
 
@@ -42,18 +56,26 @@ Pull docker image from Docker hub
 docker pull ashwinzyx/ragbuilder:latest
 ```
 
-Run the Docker Container.
-Provide env variables using command line
+Run the docker Container.
+You may provide env variables using command line as shown below:
 ``` sh
-docker run  -p 55003:8005  -e OPENAI_API_KEY=sk-....
+docker run -p 55003:8005 -e OPENAI_API_KEY=sk-....
 ```
 
 OR 
 
-Create .env as specified in the [Environment Variables Setup](env.md) section and use it while running the container
-``` sh
-docker run --env-file .env -p 55003:8005 ragbuilder
-```
+Create .env as specified in the [Environment Variables Setup](env.md) section and use it while running the container. The env file must be in the same directory where the docker command is being run.
+=== "MacOS/ Linux"
+
+    ``` sh
+    docker run -it -v "$(pwd):/ragbuilder" --env-file .env -p 55003:8005 ashwinzyx/ragbuilder:latest
+    ```
+
+=== "Windows"
+
+    ``` sh
+    docker run -d -v %cd%:/ragbuilder --env-file .env -p 55003:8005 ashwinzyx/ragbuilder
+    ```
 
 This will start the Ragbuilder Uvicorn app and open the browser. If the browser window doesn't open automatically, go to [http://localhost:55003/](http://localhost:55003/) in your browser to access the RagBuilder dashboard.
 
