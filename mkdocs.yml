@@ -1,4 +1,4 @@
-site_name: RagBuilder Docs
+site_name: RagBuilder
 site_url: https://docs.ragbuilder.io
 nav:
     - Introduction: index.md
@@ -15,13 +15,14 @@ theme:
   logo: assets/images/logo.png
   favicon: assets/images/logo3.png
   features:
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.footer
     - navigation.path
     - navigation.instant
     - navigation.instant.preview
     - search.suggest
     - toc.integrate
+    - navigation.top
   
   # For FAQ page - collapsible Q&A using admonition
   icon:
